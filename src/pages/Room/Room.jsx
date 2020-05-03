@@ -64,7 +64,7 @@ const Room = ({ location, history }) => {
           Hello bienvenu :
           {' '}
           <b>{ nom }</b>
-          <Video />
+          {/* <Video /> */}
         </Typography>
         <br />
       </div>
