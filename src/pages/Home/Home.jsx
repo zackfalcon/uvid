@@ -32,14 +32,14 @@ const Home = ({ history }) => {
   const submitForm = async () => {
     if (nom.length < 0) {
       setError("Merci d'entrer un nom");
-    } else if (nom.length < 3) {
-      setError('Le nom d\'utilisateur doit être supérieur à 3 charactères');
-    } else {
-      history.push({
-        pathname: `/room/${nom}`,
-        state: { nom },
-      });
     }
+    if (nom.length < 3) {
+      setError('Le nom d\'utilisateur doit être supérieur à 3 charactères');
+    }
+    history.push({
+      pathname: `/room/${nom}`,
+      state: { nom },
+    });
   };
 
   return (
@@ -63,7 +63,6 @@ const Home = ({ history }) => {
             fullWidth
             id="nom"
             label="Entrez votre nom"
-            value={nom}
             name="nom"
             autoFocus
             onChange={(e) => setNom(e.target.value)}

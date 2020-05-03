@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Room = ({ location, history }) => {
   const classes = useStyles();
-  const [activate, setActivate] = useState(false);
   if (location.state === null || location.state === undefined) {
     return (
       <>
@@ -65,17 +64,7 @@ const Room = ({ location, history }) => {
           Hello bienvenu :
           {' '}
           <b>{ nom }</b>
-          <Button
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-            style={{ width: '30%', display: 'block' }}
-            onClick={() => setActivate(!activate)}
-          >
-            Activer la caméra
-          </Button>
-          {activate === true && <Video />}
+          <Video />
         </Typography>
         <br />
       </div>
