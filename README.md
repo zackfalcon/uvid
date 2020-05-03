@@ -28,3 +28,9 @@ Back (not done):
 - Socket.io
 
 All of this using WebRTC
+
+
+## Deploy
+
+Heroku link of the app : 
+https://uvidappdeploy.herokuapp.com/
